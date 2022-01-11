@@ -1,0 +1,22 @@
+{
+  "retries" : 1,
+  
+  "defaultCommandTimeout":80000,
+  "pageLoadTimeout" :100000,
+  "chromeWebSecurity": false,
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/report",
+    "charts": true,
+    "reportPageTitle": "custom-title",
+    "embeddedScreenshots" : true
+  },
+  "env" :
+  {
+    "baseURL" : "https://www.oecd.org/"
+    
+    
+    
+  }
+  
+}
