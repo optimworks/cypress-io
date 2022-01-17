@@ -1,7 +1,7 @@
 var logloc =
 {
-    usernameLocator: ('#txtUsername'),
-    passwordLocator: ('#txtPassword'),
-    loginbtnLocator: ('#btnLogin')
+    usernameLocator: ('[id="txtUsername"]'),
+    passwordLocator: ('[id="txtPassword"]'),
+    loginbtnLocator: ('[type="submit"]')
 };
 module.exports = logloc;

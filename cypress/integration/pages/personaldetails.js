@@ -1,6 +1,6 @@
 var pc = require('../locators/personal.js');
 Cypress.Commands.add('personalcustomdetails', (id, driver, month, year, b, gender, ssn, sin, mstatus, ctry, dmonth, dyear, c, nname, mservice, bgroup) => {
-    cy.get(pc.personalbtnLocator).click({ multiple: true });
+    cy.get(pc.personalbtnLocator).click({ force: true });
     cy.get(pc.otheridLocator).clear().type(id);
     cy.get(pc.drivinglicLocator).clear().type(driver);
     cy.get(pc.licenseexpdateLocator).click();

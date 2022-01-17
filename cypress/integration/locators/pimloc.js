@@ -1,17 +1,17 @@
 var emploc =
 {
-    pimLocator: ('#menu_pim_viewPimModule>b'),
-    addempLocator: ('a', 'Add Employee'),
-    fnameLocator: ('#firstName'),
-    mnameLocator: ('#middleName'),
-    lnameLocator: ('#lastName'),
-    empidLocator: ('#employeeId'),
-    photoLocator: ('#photofile'),
-    checkboxLocator: ('#chkLogin'),
-    checkunameLocator: ('#user_name'),
-    checkpwdLocator: ('#user_password'),
-    checkrepwdLocator: ('#re_password'),
-    statusLocator: ('#status'),
-    addempbtnLocator: ('#btnSave')
+    pimLocator: ('[id="menu_pim_viewPimModule"]>b'),
+    addempLocator: ('[id="menu_pim_addEmployee"]'),
+    fnameLocator: ('[name="firstName"]'),
+    mnameLocator: ('[name="middleName"]'),
+    lnameLocator: ('[name="lastName"]'),
+    empidLocator: ('[name="employeeId"]'),
+    photoLocator: ('[name="photofile"]'),
+    checkboxLocator: ('[name="chkLogin"]'),
+    checkunameLocator: ('[name="user_name"]'),
+    checkpwdLocator: ('[name="user_password"]'),
+    checkrepwdLocator: ('[name="re_password"]'),
+    statusLocator: ('[name="status"]'),
+    addempbtnLocator: ('[id="btnSave"]')
 };
 module.exports = emploc;
