@@ -13,4 +13,5 @@ Cypress.Commands.add('addemployeedetails', (fname, mname, lname, number, path, u
    cy.get(addemployeepagelocators.checkrepwdLocator).type(repwd);
    cy.get(addemployeepagelocators.statusLocator).select(selected);
    cy.get(addemployeepagelocators.addempbtnLocator).click();
+
 })
