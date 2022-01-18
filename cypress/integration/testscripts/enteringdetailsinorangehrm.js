@@ -1,0 +1,17 @@
+describe('Testing Orangehrm', () => {
+    let data1;
+    beforeEach(function () {
+        cy.fixture('testdata').then(function (data) {
+            data1 = data;
+        })
+    })
+    it('Testcase-1', () => {
+        cy.visit('/');
+        var number = Math.floor(Math.random() * 100000);
+        cy.logindetails(data1.TC_001.loginDetails.username,data1.TC_001.loginDetails.password);
+        cy.addemployeedetails(data1.TC_001.addemployeeDetails.firstname,data1.TC_001.addemployeeDetails.middlename,data1.TC_001.addemployeeDetails.lastname,number,data1.TC_001.addemployeeDetails.photo,data1.TC_001.addemployeeDetails.username,data1.TC_001.addemployeeDetails.password,data1.TC_001.addemployeeDetails.confirmpassword,data1.TC_001.addemployeeDetails.status);
+        cy.personalcustomdetails(data1.TC_001.personalcustomDetails.otherid,data1.TC_001.personalcustomDetails.drivinglicensenumber,data1.TC_001.personalcustomDetails.licenseexpirymonth,data1.TC_001.personalcustomDetails.licenseexpiryyear,data1.TC_001.personalcustomDetails.licenseexpirydate,data1.TC_001.personalcustomDetails.gender,data1.TC_001.personalcustomDetails.ssnnumber,data1.TC_001.personalcustomDetails.sinnumber,data1.TC_001.personalcustomDetails.mstatus,data1.TC_001.personalcustomDetails.country,data1.TC_001.personalcustomDetails.dateofbirthmonth,data1.TC_001.personalcustomDetails.dateofbirthyear,data1.TC_001.personalcustomDetails.dateofbirthdate,data1.TC_001.personalcustomDetails.nickname,data1.TC_001.personalcustomDetails.militaryservice,data1.TC_001.personalcustomDetails.bloodgroup);
+        cy.personalcustomdetails(data1.TC_001.personalcustomDetails2.otherid,data1.TC_001.personalcustomDetails2.drivinglicensenumber,data1.TC_001.personalcustomDetails2.licenseexpirymonth,data1.TC_001.personalcustomDetails2.licenseexpiryyear,data1.TC_001.personalcustomDetails2.licenseexpirydate,data1.TC_001.personalcustomDetails2.gender,data1.TC_001.personalcustomDetails2.ssnnumber,data1.TC_001.personalcustomDetails2.sinnumber,data1.TC_001.personalcustomDetails2.mstatus,data1.TC_001.personalcustomDetails2.country,data1.TC_001.personalcustomDetails2.dateofbirthmonth,data1.TC_001.personalcustomDetails2.dateofbirthyear,data1.TC_001.personalcustomDetails2.dateofbirthdate,data1.TC_001.personalcustomDetails2.nickname,data1.TC_001.personalcustomDetails2.militaryservice,data1.TC_001.personalcustomDetails2.bloodgroup);
+        cy.personalcustomdetails(data1.TC_001.personalcustomDetails3.otherid,data1.TC_001.personalcustomDetails3.drivinglicensenumber,data1.TC_001.personalcustomDetails3.licenseexpirymonth,data1.TC_001.personalcustomDetails3.licenseexpiryyear,data1.TC_001.personalcustomDetails3.licenseexpirydate,data1.TC_001.personalcustomDetails3.gender,data1.TC_001.personalcustomDetails3.ssnnumber,data1.TC_001.personalcustomDetails3.sinnumber,data1.TC_001.personalcustomDetails3.mstatus,data1.TC_001.personalcustomDetails3.country,data1.TC_001.personalcustomDetails3.dateofbirthmonth,data1.TC_001.personalcustomDetails3.dateofbirthyear,data1.TC_001.personalcustomDetails3.dateofbirthdate,data1.TC_001.personalcustomDetails3.nickname,data1.TC_001.personalcustomDetails3.militaryservice,data1.TC_001.personalcustomDetails3.bloodgroup);
+    })
+})

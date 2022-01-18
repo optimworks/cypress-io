@@ -1,4 +1,5 @@
 {
+  "baseUrl" : "https://opensource-demo.orangehrmlive.com/",
   "retries" : 1,
   
   "defaultCommandTimeout":80000,
@@ -10,13 +11,7 @@
     "charts": true,
     "reportPageTitle": "custom-title",
     "embeddedScreenshots" : true
-  },
-  "env" :
-  {
-    "baseURL" : "https://www.oecd.org/"
-    
-    
-    
   }
+  
   
 }

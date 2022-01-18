@@ -1,0 +1,72 @@
+{
+    "TC_001": {
+        "loginDetails": {
+            "username": "Admin",
+            "password": "admin123"
+        },
+        "addemployeeDetails": {
+            "firstname": "Krishna",
+            "middlename": "sai",
+            "lastname": "Kongandla",
+            "photo": "/t1/bookenviron.jpg",
+            "username": "krishna2e241123@@",
+            "password": "manideep@123",
+            "confirmpassword": "manideep@123",
+            "status": "Disabled"
+        },
+        "personalcustomDetails": {
+            "otherid": "1111111111",
+            "drivinglicensenumber": "22222222",
+            "licenseexpirymonth": "Dec",
+            "licenseexpiryyear": "2055",
+            "licenseexpirydate": "1",
+            "gender": "#personal_optGender_2",
+            "ssnnumber": "33333",
+            "sinnumber": "4444444",
+            "mstatus": "Married",
+            "country": "French",
+            "dateofbirthmonth": "Jan",
+            "dateofbirthyear": "1987",
+            "dateofbirthdate": "23",
+            "nickname": "kittu",
+            "militaryservice": "yes",
+            "bloodgroup": "O-"
+        },
+        "personalcustomDetails2": {
+            "otherid": "1010101010101010101",
+            "drivinglicensenumber": "202020202020202",
+            "licenseexpirymonth": "Jan",
+            "licenseexpiryyear": "2067",
+            "licenseexpirydate": "1",
+            "gender": "#personal_optGender_1",
+            "ssnnumber": "303030303",
+            "sinnumber": "4040404040404",
+            "mstatus": "Single",
+            "country": "Indian",
+            "dateofbirthmonth": "Nov",
+            "dateofbirthyear": "2006",
+            "dateofbirthdate": "23",
+            "nickname": "Tinku",
+            "militaryservice": "no",
+            "bloodgroup": "AB+"
+        },
+        "personalcustomDetails3": {
+            "otherid": "455678",
+            "drivinglicensenumber": "456789",
+            "licenseexpirymonth": "Dec",
+            "licenseexpiryyear": "2111",
+            "licenseexpirydate": "24",
+            "gender": "#personal_optGender_1",
+            "ssnnumber": "54678",
+            "sinnumber": "98765432",
+            "mstatus": "Other",
+            "country": "Danish",
+            "dateofbirthmonth": "Jan",
+            "dateofbirthyear": "2006",
+            "dateofbirthdate": "23",
+            "nickname": "Ayansh",
+            "militaryservice": "not at all",
+            "bloodgroup": "A+"
+        }
+    }
+}
