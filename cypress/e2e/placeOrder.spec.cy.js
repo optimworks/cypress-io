@@ -22,7 +22,7 @@ describe("Demo Test", () => {
 				cy.testTitle().then((testTitle) => {
 					cy.sendSmsWithTwilio(
 						"+919553953737",
-						`Test Case "${testTitle}" has failed.`
+						`Test Case "${testTitle}" has failed, so the items are cancelled.`
 					).then((response) => {
 						expect(response.status).to.eq(201)
 					})

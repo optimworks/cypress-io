@@ -1,8 +1,7 @@
 name: Run Cypress Tests
 'on':
-  push:
-    branches:
-      - '*'
+  schedule:
+    - cron: 0 * * * *
 jobs:
   build:
     runs-on: ubuntu-latest
