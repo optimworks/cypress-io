@@ -8,6 +8,7 @@ describe("Demo Test", () => {
 		cy.launchUrl(Cypress.env("url"))
 		cy.login(Cypress.env("username"), Cypress.env("password"))
 	})
+
 	it("select item", () => {
 		cy.selectItem()
 		cy.itemPage()
@@ -16,15 +17,19 @@ describe("Demo Test", () => {
 		cy.goToOverviewPage()
 		cy.goToSubmitPage()
 	})
+
 	afterEach(() => {
 		cy.testStatus().then((status) => {
 			if (status === "failed") {
 				cy.testTitle().then((testTitle) => {
-					cy.sendSmsWithTwilio(
-						"+919553953737",
-						`Test Case "${testTitle}" has failed.`
-					).then((response) => {
-						expect(response.status).to.eq(201)
+					const phoneNumbers = ["+919553953737", "+918186915509"]
+					phoneNumbers.forEach((phoneNumber) => {
+						cy.sendSmsWithTwilio(
+							phoneNumber,
+							`Test Case "${testTitle}" has failed, so the items are cancelled.`
+						).then((response) => {
+							expect(response.status).to.eq(201)
+						})
 					})
 				})
 			}
