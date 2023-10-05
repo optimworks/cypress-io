@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/D:/All/Automation/cypress-io"
+    schedule:
+      interval: "daily"
