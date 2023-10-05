@@ -5,10 +5,11 @@ describe("Demo Test", () => {
 	let info
 	beforeEach(() => {
 		info = utilities.getContactInfo()
+		cy.setViewportBasedOnDevice(Cypress.env("DEVICE_TYPE"));
 		cy.launchUrl(Cypress.env("url"))
 		cy.login(Cypress.env("username"), Cypress.env("password"))
 	})
-	it("select item", () => {
+	it("30:select item", () => {
 		cy.selectItem()
 		cy.itemPage()
 		cy.goToCartPage()
@@ -29,5 +30,19 @@ describe("Demo Test", () => {
 				})
 			}
 		})
+		cy.testStatus().then((status) => {
+			cy.addResult().then((caseId) => {
+				if (status === "failed") {
+					cy.publishToTestRail(caseId, 5)
+				} else {
+					cy.publishToTestRail(caseId, 1)
+				}
+			})
+		})
+
+		// cy.addResult().then((caseId) => {
+		// 	const imageFileName = "test.png"
+		// 	cy.addAttachmentToTestCase(caseId, imageFileName)
+		// })
 	})
 })
