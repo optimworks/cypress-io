@@ -24,6 +24,7 @@ jobs:
       - name: Run Dev
         run: npm run dev
       - name: Send Google Chat notification
+          if:failure()
         run: |
           curl -X POST \
           -H "Content-Type: application/json" \
