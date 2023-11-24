@@ -20,9 +20,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Run Dev
-        run: npm run dev
       - name: Send Google Chat notification
           if:failure()
         run: |
@@ -30,6 +27,10 @@ jobs:
           -H "Content-Type: application/json" \
           -d '{"text": "Hello, this is a notification from GitHub Actions!"}' \
           "https://chat.googleapis.com/v1/spaces/AAAAx0jIx9E/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=a4w9aFgr9cmPQ39ybgLuS1dzkkhX03kPB0GD-J8tn_g"
+
+      - name: Run Dev
+        run: npm run dev
+     
 
   prod:
     runs-on: ubuntu-latest
