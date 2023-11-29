@@ -4,10 +4,10 @@
     "axios": "^1.5.0",
     "cypress": "^13.2.0",
     "twilio": "^4.18.0"
-  }
-  "scripts":{
+  },
+  "scripts": {
     "dev": "npx cypress run",
     "prod": "npx cypress run",
-    "staging": "npx cypress run",
+    "staging": "npx cypress run"
   }
 }
