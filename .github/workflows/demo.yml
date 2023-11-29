@@ -23,10 +23,13 @@ jobs:
       - name: Send Google Chat notification
           if:failure()
         run: |
+          BUILD_ID="${{ github.run_id }}"
+          REPO="${{ github.repository }}"
+          URL="https://github.com/$REPO/actions/runs/$BUILD_ID"
           curl -X POST \
           -H "Content-Type: application/json" \
           -d '{
-              "text": "Build Failed! Build ID: ${{ github.run_id }}, Repository: ${{ github.repository }}, Workflow: ${{ github.workflow }}"
+              "text": "Build Failed! URL: "$URL", Repository name: ${{ github.repository }}, Workflow name: ${{ github.workflow }}"
             }' \
           "https://chat.googleapis.com/v1/spaces/AAAAx0jIx9E/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=a4w9aFgr9cmPQ39ybgLuS1dzkkhX03kPB0GD-J8tn_g"
 
