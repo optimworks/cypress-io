@@ -26,10 +26,41 @@ jobs:
           curl -X POST \
           -H "Content-Type: application/json" \
           -d '{
-              "text": "Build Failed! "https://github.com/"${{ github.repository }}"/actions/runs/"${{ github.run_id }}"", Repository name: ${{ github.repository }}, Workflow name: ${{ github.workflow }}"
-            }' \
-          "https://chat.googleapis.com/v1/spaces/AAAAx0jIx9E/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=a4w9aFgr9cmPQ39ybgLuS1dzkkhX03kPB0GD-J8tn_g"
-
+    "text": "Build Failed! Build ID: '${{ github.run_id }}', Repository name: ${{ github.repository }}, Workflow name: ${{ github.workflow }}",
+    "cards": [
+      {
+        "header": {
+          "title": "Build Failure"
+        },
+        "sections": [
+          {
+            "widgets": [
+              {
+                "textParagraph": {
+                  "text": "Build Failed! Build ID: '${{ github.run_id }}', Repository name: ${{ github.repository }}, Workflow name: ${{ github.workflow }}"
+                }
+              },
+              {
+                "buttons": [
+                  {
+                    "textButton": {
+                      "text": "View Failed Build",
+                      "onClick": {
+                        "openLink": {
+                          "url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }' \
+  "https://chat.googleapis.com/v1/spaces/AAAAx0jIx9E/messages?key=YOUR_API_KEY&token=YOUR_TOKEN"
       - name: Run Dev
         run: npm run dev
      
