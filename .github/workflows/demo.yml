@@ -20,8 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+      - name: Run Dev
+        run: npm run dev
       - name: Send Google Chat notification
-          if:failure()
+        if: ${{ failure() }}
         run: |
           curl -X POST \
           -H "Content-Type: application/json" \
@@ -29,9 +31,7 @@ jobs:
               "text": "Build Failed! Build ID: '${{ github.run_id }}' Url: \"https://github.com/'${{ github.repository }}'/actions/runs/'${{ github.run_id }}'\""
               }' \
               "https://chat.googleapis.com/v1/spaces/AAAAx0jIx9E/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=a4w9aFgr9cmPQ39ybgLuS1dzkkhX03kPB0GD-J8tn_g"
-      - name: Run Dev
-        run: npm run dev
-     
+          
 
   prod:
     runs-on: ubuntu-latest
