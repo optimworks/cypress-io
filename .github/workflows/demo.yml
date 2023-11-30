@@ -1,8 +1,9 @@
 name: Run Cypress Tests in Parallel
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  push:
+    branches:
+      - '*'
 
 jobs:
   dev:
